@@ -35,3 +35,15 @@ def install_depends():
 
 def format():
     run(f"mke2fs -j {root_partition}")
+    run("mkdir /mnt/debinst")
+    run(f"mount {root_partition} /mnt/debinst")
+    run("mkdir work")
+    run(
+        "cd $HOME/work && wget ftp.debian.org/debian/pool/main/d/debootstrap/debootstrap_1.0.128_all.deb"
+    )
+    run("cd $HOME/work && ar -x debootstrap_1.0.128_all.deb")
+    run("cd /")
+    run("zcat $HOME/work/data.tar.gz | tar xv")
+    run(
+        "/usr/sbin/debootstrap --arch amd64 bullseye /mnt/debinst http://ftp.us.debian.org/debian"
+    )
