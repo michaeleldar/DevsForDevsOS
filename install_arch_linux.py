@@ -6,8 +6,8 @@ def install(package):
 
 
 run("pacman -Syu")
-install("xorg")
-install("gdm")
-install("cutefish")
+install("-s xorg")
+install("-s gdm")
+install("-s cutefish")
 run("systemctl enable gdm.service")
 run("systemctl start gdm.service")
