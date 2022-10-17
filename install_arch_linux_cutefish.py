@@ -8,5 +8,6 @@ run(f"pacman -S cutefish --noconfirm")
 run("systemctl enable sddm")
 
 run("pacman -S firefox --noconfirm")
+run("pacman -S vlc --noconfirm")
 
 run("systemctl start sddm")
