@@ -1,6 +1,9 @@
 from os import system as run  # To make it quicker to type.
 
 
+def runextra():
+    
+
 def error(step, reason, fatal):
     print()
     print("------------------------------------------")
@@ -47,3 +50,6 @@ def format():
     run(
         "/usr/sbin/debootstrap --arch amd64 bullseye /mnt/debinst http://ftp.us.debian.org/debian"
     )
+
+def install():
+    run("")
