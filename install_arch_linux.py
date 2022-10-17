@@ -1,13 +1,9 @@
 from os import system as run
 
 
-def install(package):
-    run(f"pacman {package}")
-
-
 run("pacman -Syu")
-install("-s xorg")
-install("-s gdm")
-install("-s cutefish")
+run(f"pacman xorg")
+run(f"pacman gdm")
+run(f"pacman cutefish")
 run("systemctl enable gdm.service")
 run("systemctl start gdm.service")
