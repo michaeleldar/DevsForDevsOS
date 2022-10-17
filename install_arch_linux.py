@@ -6,6 +6,7 @@ def install(package):
 
 
 run("pacman -Syu")
+run("pacman -S xorg")
 install("xorg")
 install("gdm")
 install("cutefish")
