@@ -10,6 +10,7 @@ run("systemctl enable gdm.service")
 run("pacman -Rs epiphany --noconfirm")
 run("pacman -S firefox --noconfirm")
 
+"""
 easy_install_answered_correctly = False
 while easy_install_answered_correctly == False:
     easy_install = input(
@@ -22,5 +23,6 @@ while easy_install_answered_correctly == False:
 
 install_config = open("/etc/devsfordevsupdates.config")
 install_config.write()
+"""
 
 run("systemctl start gdm.service")
