@@ -8,6 +8,7 @@ Python installed.
 
 Run
 ```
-curl https://raw.githubusercontent.com/michaeleldar/DevsForDevsOS/master/install_arch_linux.py > install.py
+curl https://raw.githubusercontent.com/michaeleldar/DevsForDevsOS/master/install_arch_linux_<DE choice>.py > install.py
 python3 install.py
 ```
+Replace DE choice with cutefish or gnome.
